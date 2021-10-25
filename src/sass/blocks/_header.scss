@@ -1,0 +1,15 @@
+.header {
+  height: 100vh;
+  background: url("../img/main-bg.jpg") center center/cover no-repeat;
+  padding-top: 32px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    font-family: "Gilroy Bold";
+    display: flex;
+    align-items: center;
+    font-size: rem(28px);
+  }
+}

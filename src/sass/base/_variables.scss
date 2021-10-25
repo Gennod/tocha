@@ -1,0 +1,19 @@
+$fz-main: 16px;
+$fz-secondary: 24px;
+$fz-title: 46px;
+$fz-big: 50px;
+$fz-medium: 20px;
+$fz-small: 18px;
+
+$fw-bold: "Gilroy Bold";
+$fw-ebold: "Gilroy ExtraBold";
+$fw-sbold: "Gilroy SemiBold";
+$fw-medium: "Gilroy Medium";
+$fw-regular: "Gilroy Regular";
+
+
+
+
+@function rem($size) {
+  @return $size / $fz-main * 1rem;
+}
