@@ -10,6 +10,12 @@ ul {
 
 a {
   display: block;
+  text-decoration: none;
+}
+
+html {
+  font-size: ($fz-main / 16px) * 100%;
+  font-family: $ff-regular;
 }
 
 .container {

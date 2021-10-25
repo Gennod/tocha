@@ -1,15 +1,35 @@
 .header {
   height: 100vh;
-  background: url("../img/main-bg.jpg") center center/cover no-repeat;
-  padding-top: 32px;
+  background: url("../assets/img/main-bg.jpg") center center/cover no-repeat;
+  padding-top: rem(32px);
   &__top {
-    display: flex;
-    justify-content: space-between;
+    @include dflex-sb-center;
+    margin-bottom: rem(123px);
   }
   &__logo {
-    font-family: "Gilroy Bold";
-    display: flex;
-    align-items: center;
+    @include dflex-center;
+    font-family: $ff-bold;
     font-size: rem(28px);
+  }
+  &__btns {
+    @include dflex-sb-center;
+  }
+  &__btn + &__btn {
+    margin-left: rem(12px);
+  }
+  &__title {
+    font-family: $ff-ebold;
+    font-size: rem($fz-big);
+  }
+  &__descr {
+    max-width: rem(482px);
+    font-size: $fz-secondary;
+    margin-bottom: rem(32px);
+  }
+  &__link {
+    max-width: 168px;
+  }
+  &--violet {
+    color: $color-main;
   }
 }

@@ -4,3 +4,20 @@
       right: auto;
   }
 }
+@mixin dflex {
+  display: flex;
+}
+@mixin dflex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin dflex-sb-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin dflex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
