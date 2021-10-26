@@ -1,21 +1,11 @@
 .telegram {
+  @include dots;
   padding-top: rem(54);
   text-align: center;
   &__title {
     font-family: $ff-ebold;
     font-size: $fz-title;
     margin-bottom: rem(40);
-  }
-  &__grid {
-    @include dflex-sb;
-    position: relative;
-    min-height: rem(750);
-  }
-  &__column {
-    width: rem(233);
-    &--big {
-      align-self: flex-end;
-    }
   }
   &__step {
     @include dflex-center;
@@ -37,10 +27,18 @@
   &__descr {
     margin-bottom: rem(30);
   }
-}
+  &__slider {
+    position: relative;
+  }
+  &__slider-wrapper {
+    @include push--auto;
+    overflow: hidden;
+    width: rem(280);
+    padding-bottom: rem(30);
+  }
+  &__slider-inner {
+    display: flex;
+    transition: all   .3s;
+  }
 
-.lines {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
