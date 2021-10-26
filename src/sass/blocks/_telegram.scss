@@ -1,0 +1,46 @@
+.telegram {
+  padding-top: rem(54);
+  text-align: center;
+  &__title {
+    font-family: $ff-ebold;
+    font-size: $fz-title;
+    margin-bottom: rem(40);
+  }
+  &__grid {
+    @include dflex-sb;
+    position: relative;
+    min-height: rem(750);
+  }
+  &__column {
+    width: rem(233);
+    &--big {
+      align-self: flex-end;
+    }
+  }
+  &__step {
+    @include dflex-center;
+    @include push--auto;
+    width: rem(72);
+    height: rem(72);
+    border-radius: 50%;
+    background: $color-main-light;
+    font-family: $ff-bold;
+    font-size: $fz-subtitle;
+    color: $color-main; 
+    margin-bottom: rem(16);
+  }
+  &__subtitle {
+    font-family: $ff-bold;
+    font-size: $fz-medium;
+    line-height: rem(28);
+  }
+  &__descr {
+    margin-bottom: rem(30);
+  }
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
