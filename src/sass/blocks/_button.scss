@@ -1,9 +1,10 @@
 .btn {
+  @include button-reset;
   font-family: $ff-bold;
-  padding: rem(10px) rem(20px);
+  padding: rem(10) rem(20);
   background: $color-main;
-  box-shadow: 0 rem(10px) rem(20px) $color-shadow;
-  border-radius: rem(6px);
+  box-shadow: 0 rem(10) rem(20) $color-shadow;
+  border-radius: rem(6);
   color: $color-white;
   border: none;
   cursor: pointer;

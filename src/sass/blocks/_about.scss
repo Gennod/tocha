@@ -1,0 +1,29 @@
+.about {
+  padding: rem(73p) 0 rem(82p) 0;
+  background: $color-white-bg;
+  &__wrapper {
+    @include dflex;
+  }
+  &__content {
+    padding-top: 27px;
+    max-width: rem(522);
+    margin-right: rem(76);
+  }
+  &__title {
+    font-family: ff-bold;
+    font-size: $fz-title;
+    margin-bottom: rem(68);
+  }
+  &__list-item {
+    @include dflex;
+    margin-bottom: rem(48);
+  }
+  &__icon {
+    margin-right: rem(26);
+  }
+  &__subtitle {
+    font-family: $ff-sbold;
+    font-size: $fz-secondary;
+    margin-bottom: rem(8);
+  }
+}
