@@ -1,6 +1,6 @@
 .telegram {
   @include dots;
-  padding-top: rem(54);
+  padding: rem(54) 0 rem(60) 0;
   text-align: center;
   &__title {
     font-family: $ff-ebold;

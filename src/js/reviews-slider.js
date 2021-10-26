@@ -1,9 +1,9 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const slidesWrapper = document.querySelector(".tariffs__slider-wrapper"),
-    slidesField = document.querySelector(".tariffs__slider-inner"),
+  const slidesWrapper = document.querySelector(".reviews__slider-wrapper"),
+    slidesField = document.querySelector(".reviews__slider-inner"),
     width = window.getComputedStyle(slidesWrapper).width,
-    slides = document.querySelectorAll(".tariffs__slide"),
-    dotsWrapper = document.querySelector(".tariffs__dots"),
+    slides = document.querySelectorAll(".reviews__slide"),
+    dotsWrapper = document.querySelector(".reviews__dots"),
     dotsArr = [];
   
   let slideIndex = 1,
@@ -18,11 +18,11 @@ window.addEventListener("DOMContentLoaded", () => {
   for (let i = 0; i < slides.length; i++) {
     const dot = document.createElement('li');
 
-    dot.setAttribute('data-slide-to', i + 1);
-    dot.classList.add("tariffs__dot");
+    dot.setAttribute('data-slide', i + 1);
+    dot.classList.add("reviews__dot");
     
     if (i == 0) {
-      dot.classList.add("tariffs__dot--active");  
+      dot.classList.add("reviews__dot--active");  
     }
     dotsWrapper.append(dot);
     dotsArr.push(dot);
@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   dotsArr.forEach(dot => {
     dot.addEventListener("click", (e) => {
-      const slideTo = e.target.getAttribute('data-slide-to');
+      const slideTo = e.target.getAttribute('data-slide');
 
       slideIndex = slideTo;
       offset = +width.slice(0, width.length - 2) * (slideTo - 1);
@@ -38,11 +38,11 @@ window.addEventListener("DOMContentLoaded", () => {
       slidesField.style.transform = `translateX(-${offset}px)`;
 
       dotsArr.forEach(dot => {
-        if (dot.classList.contains("tariffs__dot--active")) {
-          dot.classList.remove("tariffs__dot--active");
+        if (dot.classList.contains("reviews__dot--active")) {
+          dot.classList.remove("reviews__dot--active");
         }
       });
-      dotsArr[slideIndex - 1].classList.add("tariffs__dot--active");
+      dotsArr[slideIndex - 1].classList.add("reviews__dot--active");
 
     });
   });

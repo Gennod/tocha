@@ -35,6 +35,7 @@ html {
 
 .container {
   @include push--auto;
+	position: relative;
   max-width: rem(1140);
   padding: 0 rem(15);
 }
