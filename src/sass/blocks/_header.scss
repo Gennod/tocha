@@ -1,35 +1,37 @@
 .header {
   height: 100vh;
   background: url("../assets/img/main-bg.jpg") center center/cover no-repeat;
-  padding-top: rem(32px);
+  padding-top: rem(32);
   &__top {
     @include dflex-sb-center;
-    margin-bottom: rem(123px);
+    margin-bottom: rem(123);
   }
   &__logo {
     @include dflex-center;
     font-family: $ff-bold;
-    font-size: rem(28px);
+    font-size: rem(28);
   }
   &__btns {
     @include dflex-sb-center;
   }
   &__btn + &__btn {
-    margin-left: rem(12px);
+    margin-left: rem(12);
   }
   &__title {
     font-family: $ff-ebold;
     font-size: rem($fz-big);
   }
   &__descr {
-    max-width: rem(482px);
+    max-width: rem(482);
     font-size: $fz-secondary;
-    margin-bottom: rem(32px);
+    margin-bottom: rem(32);
   }
   &__link {
-    max-width: 168px;
+    max-width: rem(168);
   }
-  &--violet {
-    color: $color-main;
+  &__text {
+    &--violet {
+      color: $color-main;
+    }
   }
 }

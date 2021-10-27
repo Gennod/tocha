@@ -1,8 +1,9 @@
 .reviews {
   @include dots;
-  padding-top: rem(17);
+  padding: rem(17) 0 rem(80) 0;
   text-align: center;
   background-color: $color-white-bg;
+
   &__title {
     font-family: $ff-ebold;
     font-size: $fz-title;

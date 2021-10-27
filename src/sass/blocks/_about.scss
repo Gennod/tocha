@@ -1,5 +1,5 @@
 .about {
-  padding: rem(73p) 0 rem(82p) 0;
+  padding: rem(73) 0 rem(82) 0;
   background: $color-white-bg;
   &__wrapper {
     @include dflex;
@@ -10,7 +10,7 @@
     margin-right: rem(76);
   }
   &__title {
-    font-family: ff-bold;
+    font-family: $ff-bold;
     font-size: $fz-title;
     margin-bottom: rem(68);
   }

@@ -5,10 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tocha</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
@@ -27,12 +25,12 @@
             </div>
             <div class="header__content">
                 <h1 class="header__title">
-                    <span class="header--violet">Telegram чат</span><br>на вашем сайте
+                    <span class="header__text header__text--violet">Telegram чат</span><br>на вашем сайте
                 </h1>
                 <div class="header__descr">
                     Общение с клиентами станет простым
                     и удобным, а подключение займет 5 минут.
-                    Первый месяц — <span class="header--violet">бесплатно!</span>
+                    Первый месяц — <span class="header__text header__text--violet">бесплатно!</span>
                 </div>
                 <a href="#" class="header__link btn">Подключить</a>
             </div>
@@ -50,7 +48,7 @@
                                 <img width="68" height="68" class="about__icon"
                                     src="./assets/icons/about-telegram-icon.svg" alt="about-telegram-icon">
                                 <div class="about__descr">
-                                    <div class="about__subtitle">Ничего лишнего</div>
+                                    <h3 class="about__subtitle">Ничего лишнего</h3>
                                     <div class="about__text">Отсутствие лишних приложений для операторов. Оператору не
                                         нужно учиться работать с чатом</div>
                                 </div>
@@ -59,7 +57,7 @@
                                 <img width="68" height="68" class="about__icon"
                                     src="./assets/icons/about-simple-icon.svg" alt="about-simple-icon">
                                 <div class="about__descr">
-                                    <div class="about__subtitle">Простота</div>
+                                    <h3 class="about__subtitle">Простота</h3>
                                     <div class="about__text">Простая установка на сайт</div>
                                 </div>
                             </li>
@@ -67,7 +65,7 @@
                                 <img width="68" height="68" class="about__icon"
                                     src="./assets/icons/about-assistent-icon.svg" alt="about-assistent-icon">
                                 <div class="about__descr">
-                                    <div class="about__subtitle">Несколько ассистентов</div>
+                                    <h3 class="about__subtitle">Несколько ассистентов</h3>
                                     <div class="about__text">Возможность подключения нескольких ассистентов</div>
                                 </div>
                             </li>
@@ -75,7 +73,7 @@
                                 <img width="68" height="68" class="about__icon"
                                     src="./assets/icons/about-custom-icon.svg" alt="about-custom-icon">
                                 <div class="about__descr">
-                                    <div class="about__subtitle">Кастомизация</div>
+                                    <h3 class="about__subtitle">Кастомизация</h3>
                                     <div class="about__text">Настройка интерфейса под нужды сайта</div>
                                 </div>
                             </li>
@@ -87,8 +85,8 @@
         </section>
         <section class="tariffs">
             <div class="container">
-                <div class="tariffs__title">Тарифы</div>
-                <div class="tariffs__subtitle">Стоимость зависит от трафика сайта</div>
+                <h2 class="tariffs__title">Тарифы</h2>
+                <h3 class="tariffs__subtitle">Стоимость зависит от трафика сайта</h3>
                 <div class="tariffs__slider">
                     <div class="tariffs__slider-wrapper">
                         <div class="tariffs__slider-inner">
@@ -163,7 +161,7 @@
         <section class="reviews">
             <div class="container">
                 <img width="142" height="120" class="reviews__ico" src="./assets/icons/reviews-icon-dizk.svg">
-                <div class="reviews__title">Отзывы клиентов</div>
+                <h2 class="reviews__title">Отзывы клиентов</h2>
                 <div class="reviews__slider">
                     <div class="reviews__slider-wrapper">
                         <div class="reviews__slider-inner">
@@ -172,10 +170,14 @@
                                     <li class="reviews__item">
                                         <div class="reviews__text-wrapper">
                                             <div class="reviews__subtitle">Как же удобно!</div>
-                                            <div class="reviews__text">В рамках спецификации современных стандартов, базовые сценарии поведения пользователей, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут преданы социально-демократической анафеме.</div>
+                                            <div class="reviews__text">В рамках спецификации современных стандартов,
+                                                базовые сценарии поведения пользователей, которые представляют собой
+                                                яркий пример континентально-европейского типа политической культуры,
+                                                будут преданы социально-демократической анафеме.</div>
                                         </div>
                                         <div class="reviews__info">
-                                            <img width="56" height="56" class="reviews__img" src="./assets/icons/reviews-icon-1.png" alt="reviews-icon-1">
+                                            <img width="56" height="56" class="reviews__img"
+                                                src="./assets/icons/reviews-icon-1.png" alt="reviews-icon-1">
                                             <div class="reviews__about">
                                                 <div class="reviews__name">Анна Купер</div>
                                                 <div class="reviews__site">romashka.ru</div>
@@ -185,10 +187,14 @@
                                     <li class="reviews__item">
                                         <div class="reviews__text-wrapper">
                                             <div class="reviews__subtitle">Теперь мы идем в ногу со временем</div>
-                                            <div class="reviews__text">А ещё интерактивные прототипы превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Банальные, но неопровержимые выводы, а также тщательные исследования конкурентов формируют сеть.</div>
+                                            <div class="reviews__text">А ещё интерактивные прототипы превращены в
+                                                посмешище, хотя само их существование приносит несомненную пользу
+                                                обществу. Банальные, но неопровержимые выводы, а также тщательные
+                                                исследования конкурентов формируют сеть.</div>
                                         </div>
                                         <div class="reviews__info">
-                                            <img width="56" height="56" class="reviews__img" src="./assets/icons/reviews-icon-2.png" alt="reviews-icon-2">
+                                            <img width="56" height="56" class="reviews__img"
+                                                src="./assets/icons/reviews-icon-2.png" alt="reviews-icon-2">
                                             <div class="reviews__about">
                                                 <div class="reviews__name">Андрей Васильев</div>
                                                 <div class="reviews__site">samogon-ont.ru</div>
@@ -202,10 +208,13 @@
                                     <li class="reviews__item">
                                         <div class="reviews__text-wrapper">
                                             <div class="reviews__subtitle">Lorem ipsum dolor sit amet.</div>
-                                            <div class="reviews__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium sapiente voluptatem hic. Et a optio nostrum iste accusantium placeat blanditiis.</div>
+                                            <div class="reviews__text">Lorem ipsum dolor sit amet consectetur,
+                                                adipisicing elit. Praesentium sapiente voluptatem hic. Et a optio
+                                                nostrum iste accusantium placeat blanditiis.</div>
                                         </div>
                                         <div class="reviews__info">
-                                            <img width="56" height="56" class="reviews__img" src="./assets/icons/reviews-icon-1.png" alt="reviews-icon-1">
+                                            <img width="56" height="56" class="reviews__img"
+                                                src="./assets/icons/reviews-icon-1.png" alt="reviews-icon-1">
                                             <div class="reviews__about">
                                                 <div class="reviews__name">Lorem, ipsum.</div>
                                                 <div class="reviews__site">romashka.ru</div>
@@ -214,11 +223,16 @@
                                     </li>
                                     <li class="reviews__item">
                                         <div class="reviews__text-wrapper">
-                                            <div class="reviews__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, culpa. Illum quibusdam quae reprehenderit dicta!</div>
-                                            <div class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eum eos mollitia minima harum provident voluptatum veniam nobis.</div>
+                                            <div class="reviews__subtitle">Lorem ipsum dolor sit amet consectetur
+                                                adipisicing elit. Architecto, culpa. Illum quibusdam quae reprehenderit
+                                                dicta!</div>
+                                            <div class="reviews__text">Lorem ipsum dolor sit amet consectetur
+                                                adipisicing elit. Maxime eum eos mollitia minima harum provident
+                                                voluptatum veniam nobis.</div>
                                         </div>
                                         <div class="reviews__info">
-                                            <img width="56" height="56" class="reviews__img" src="./assets/icons/reviews-icon-2.png" alt="reviews-icon-2">
+                                            <img width="56" height="56" class="reviews__img"
+                                                src="./assets/icons/reviews-icon-2.png" alt="reviews-icon-2">
                                             <div class="reviews__about">
                                                 <div class="reviews__name">Андрей Васильев</div>
                                                 <div class="reviews__site">samogon-ont.ru</div>
@@ -231,11 +245,14 @@
                                 <ul class="reviews__list">
                                     <li class="reviews__item">
                                         <div class="reviews__text-wrapper">
-                                            <div class="reviews__subtitle">Lorem ipsum dolor sit amet.</div>
-                                            <div class="reviews__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium sapiente voluptatem hic. Et a optio nostrum iste accusantium placeat blanditiis.</div>
+                                            <h3 class="reviews__subtitle">Lorem ipsum dolor sit amet.</h3>
+                                            <div class="reviews__text">Lorem ipsum dolor sit amet consectetur,
+                                                adipisicing elit. Praesentium sapiente voluptatem hic. Et a optio
+                                                nostrum iste accusantium placeat blanditiis.</div>
                                         </div>
                                         <div class="reviews__info">
-                                            <img width="56" height="56" class="reviews__img" src="./assets/icons/reviews-icon-1.png" alt="reviews-icon-1">
+                                            <img width="56" height="56" class="reviews__img"
+                                                src="./assets/icons/reviews-icon-1.png" alt="reviews-icon-1">
                                             <div class="reviews__about">
                                                 <div class="reviews__name">Lorem, ipsum.</div>
                                                 <div class="reviews__site">romashka.ru</div>
@@ -244,11 +261,16 @@
                                     </li>
                                     <li class="reviews__item">
                                         <div class="reviews__text-wrapper">
-                                            <div class="reviews__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, culpa. Illum quibusdam quae reprehenderit dicta!</div>
-                                            <div class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eum eos mollitia minima harum provident voluptatum veniam nobis.</div>
+                                            <h3 class="reviews__subtitle">Lorem ipsum dolor sit amet consectetur
+                                                adipisicing elit. Architecto, culpa. Illum quibusdam quae reprehenderit
+                                                dicta!</h3>
+                                            <div class="reviews__text">Lorem ipsum dolor sit amet consectetur
+                                                adipisicing elit. Maxime eum eos mollitia minima harum provident
+                                                voluptatum veniam nobis.</div>
                                         </div>
                                         <div class="reviews__info">
-                                            <img width="56" height="56" class="reviews__img" src="./assets/icons/reviews-icon-2.png" alt="reviews-icon-2">
+                                            <img width="56" height="56" class="reviews__img"
+                                                src="./assets/icons/reviews-icon-2.png" alt="reviews-icon-2">
                                             <div class="reviews__about">
                                                 <div class="reviews__name">Андрей Васильев</div>
                                                 <div class="reviews__site">samogon-ont.ru</div>
@@ -261,14 +283,88 @@
                     </div>
                     <ul class="reviews__dots">
 
-                    </ul> 
+                    </ul>
                 </div>
-            </img>
+                </img>
+        </section>
+        <section class="connect">
+            <div class="container">
+                <div class="connect__wrapper">
+                    <img class="connect__img" width="300" height="260" src="./assets/icons/frame.svg" alt="frame">
+                    <div class="connect__content">
+                        <h3 class="connect__title">Подключите Telegram чат уже сегодня</h3>
+                        <form class="connect__form">
+                            <input class="connect__input" type="text" placeholder="Введите e-mail">
+                            <button class="connect__btn btn" type="submit">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <script src="js/tariff-slider.js"></script>
-    <script src="js/telegram-slider.js"></script>
-    <script src="js/reviews-slider.js"></script>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__top">
+                <div class="container">
+                    <div class="footer__top-wrapper">
+                        <div class="footer__logo">
+                            <a class="footer__logo-link" href="#"><img class="footer__img" src="./assets/icons/logo.png"
+                                    alt="logo"></a>
+                            <h2 class="footer__logo-name">tocha</h2>
+                        </div>
+                        <nav class="footer__nav">
+                            <div class="footer__column">
+                                <h3 class="footer__column-name">Telegram чат</h3>
+                                <ul class="footer__list">
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">О нас</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Партнеры</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Инструкция</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Цены</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__column">
+                                <h3 class="footer__column-name">Поддержка</h3>
+                                <ul class="footer__list">
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Центр поддержки</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Политика конфеденциальности</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Документы оферта</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Документы оферта</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a class="footer__link" href="#">Статус</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container">
+                    <div class="footer__descr">© 2021 Tocha. Все права защищены</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

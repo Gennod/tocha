@@ -1,0 +1,54 @@
+.footer {
+  &__top {
+    padding: rem(104) 0 rem(78);
+    background-color: $color-footer-top;
+  }
+  &__top-wrapper {
+    @include dflex-sb;
+  }
+  &__nav {
+    @include dflex-sb;
+    padding-right: rem(190);
+  }
+  &__bottom {
+    padding: rem(25) 0;
+    background-color: $color-footer-bottom;
+  }
+  &__logo {
+    @include dflex-center-start-column;
+  }
+  &__img {
+    width: rem(80);
+    height: rem(69);
+  }
+  &__logo-name {
+    font-family: $ff-bold;
+    font-size: $fz-connect;
+    color: $color-white;
+  }
+  &__column {
+    margin-left: rem(126);
+    text-align: left;
+  }
+  &__column-name {
+    font-family: $ff-medium;
+    font-size: $fz-sbig;
+    color: $color-white-light;
+    line-height: rem(30);
+    margin-bottom: rem(32);
+  }
+  &__item {
+    margin-bottom: rem(12);
+  }
+  &__link {
+    line-height: rem(26);
+    color: $color-white-link;
+    transition: all .3s;
+    &:hover {
+      color: $color-main;
+    }
+  }
+  &__descr {
+    color: $color-white-descr;
+  }
+}

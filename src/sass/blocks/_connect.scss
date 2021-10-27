@@ -1,0 +1,36 @@
+.connect {
+  padding: rem(90) 0;
+  &__wrapper {
+    @include dflex;
+    background: url("../assets/img/connect-bg.jpg") center center/cover no-repeat;
+    padding: rem(48) 0 0 rem(90);
+  }
+  &__content {
+    max-width: rem(445);
+  }
+  &__title {
+    font-family: $ff-ebold;
+    font-size: $fz-connect;
+    color: $color-white;
+    line-height: rem(41);
+    margin-bottom: rem(34);
+  }
+  &__img {
+    width: rem(300);
+    height: rem(260);
+    object-fit: cover;
+    margin-right: rem(100);
+  }
+  &__form {
+    @include dflex;
+  }
+  &__input {
+    padding: rem(14) rem(16);
+    border: none;
+    outline: none;
+  }
+  &__btn {
+    padding: rem(14) rem(24);
+    background: $color-black;
+  }
+}
