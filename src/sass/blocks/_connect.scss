@@ -32,5 +32,9 @@
   &__btn {
     padding: rem(14) rem(24);
     background: $color-black;
+    &:hover {
+      background-color: $btn-hover-alt;
+      color: $color-white;
+    }
   }
 }

@@ -5,7 +5,7 @@
     @include dflex;
   }
   &__content {
-    padding-top: 27px;
+    padding-top: rem(27);
     max-width: rem(522);
     margin-right: rem(76);
   }

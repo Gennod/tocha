@@ -11,7 +11,7 @@
   transition: .3s;
   text-align: center;
   &:hover {
-    background: $color-main-light;
+    background: $btn-hover;
     color: $color-main;
   }
   &--active {

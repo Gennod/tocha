@@ -35,9 +35,9 @@
       left: 50%;
       width: rem(24);
       height: rem(14);
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 14px solid $color-white;
+      border-left: rem(10) solid transparent;
+      border-right: rem(10) solid transparent;
+      border-top: rem(14) solid $color-white;
       transform: translateX(-50%);
     }
   }

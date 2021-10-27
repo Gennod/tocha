@@ -99,7 +99,7 @@ html {
   text-align: center;
 }
 .btn:hover {
-  background: #f1e4ff;
+  background: #c39bfb;
   color: #685ed6;
 }
 .btn--active {
@@ -157,7 +157,7 @@ html {
   display: flex;
 }
 .about__content {
-  padding-top: 27px;
+  padding-top: 1.6875rem;
   max-width: 32.625rem;
   margin-right: 4.75rem;
 }
@@ -391,9 +391,9 @@ html {
   left: 50%;
   width: 1.5rem;
   height: 0.875rem;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 14px solid white;
+  border-left: 0.625rem solid transparent;
+  border-right: 0.625rem solid transparent;
+  border-top: 0.875rem solid white;
   transform: translateX(-50%);
 }
 .reviews__subtitle {
@@ -472,6 +472,10 @@ html {
 .connect__btn {
   padding: 0.875rem 1.5rem;
   background: #18191f;
+}
+.connect__btn:hover {
+  background-color: #33afe1;
+  color: white;
 }
 
 .footer__top {
