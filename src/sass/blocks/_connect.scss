@@ -2,6 +2,7 @@
   padding: rem(90) 0;
   &__wrapper {
     @include dflex;
+    flex-wrap: wrap;
     background: url("../assets/img/connect-bg.jpg") center center/cover no-repeat;
     padding: rem(48) 0 0 rem(90);
   }
@@ -35,6 +36,21 @@
     &:hover {
       background-color: $btn-hover-alt;
       color: $color-white;
+    }
+  }
+}
+@media (max-width: rem(360)) {
+
+  .connect {
+    &__img {
+      width: 50%;
+      height: auto;
+    }
+    &__form {
+      flex-wrap: wrap;
+    }
+    &__btn {
+      margin-top: rem(15);
     }
   }
 }

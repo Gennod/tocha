@@ -19,7 +19,7 @@ html {
 
 	font-size: 16px;
 
-  font-family: $ff-regular;
+  	font-family: $ff-regular;
 
 	@include below($desktop) {
 	font-size: 16 / 1680 * 100vw;

@@ -5,6 +5,7 @@
   }
   &__top-wrapper {
     @include dflex-sb;
+    flex-wrap: wrap;
   }
   &__nav {
     @include dflex-sb;
@@ -50,5 +51,38 @@
   }
   &__descr {
     color: $color-white-descr;
+  }
+}
+
+@media (max-width: rem(940)) {
+  .footer {
+    &__top-wrapper {
+      @include dflex-center
+    }
+    &__nav {
+      @include dflex-center;
+      flex-wrap: wrap;
+      margin-top: rem(30);
+    }
+  }
+}
+@media (max-width: rem(850)) {
+  .footer {
+    &__top-wrapper {
+      flex-direction: column;
+    }
+    &__nav {
+      padding-right: 0;
+      text-align: left;
+    }
+    &__column {
+      margin: rem(30);
+      text-align: center;
+    }
+  }
+}
+@media (max-width: rem(650)) {
+  html {
+    font-size: 12px;
   }
 }
