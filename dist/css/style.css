@@ -480,6 +480,11 @@ html {
   transition: all 0.3s;
 }
 
+@media (max-width: 31.25rem) {
+  .reviews__list {
+    grid-template-columns: 1fr;
+  }
+}
 .connect {
   padding: 5.625rem 0;
 }
