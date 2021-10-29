@@ -81,6 +81,9 @@
 }
 @media (max-width: rem(500)) {
   .reviews {
+    &__ico {
+      display: none;
+    }
     &__list {
       grid-template-columns: 1fr;
     }
