@@ -42,6 +42,9 @@
 }
 @media (max-width: rem(350)) {
   .about {
+    &__title{
+      margin-left: rem(20);
+    }
     &__img {
       width: rem(300);
     }

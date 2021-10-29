@@ -210,6 +210,9 @@ html {
   }
 }
 @media (max-width: 21.875rem) {
+  .about__title {
+    margin-left: 1.25rem;
+  }
   .about__img {
     width: 18.75rem;
   }
