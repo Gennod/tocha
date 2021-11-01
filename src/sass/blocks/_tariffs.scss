@@ -4,53 +4,79 @@
   text-align: center;
   &__title {
     font-family: $ff-ebold;
-    font-size: $fz-title;
+    font-size: rem($fz-title);
     margin-bottom: rem(16);
   }
   &__subtitle {
     font-family: $ff-bold;
-    font-size: $fz-secondary;
+    font-size: rem($fz-secondary);
     margin-bottom: rem(40);
   }
   &__slider {
     position: relative;
-    padding-bottom: rem(35);
+    padding-bottom: rem(20);
   }
-  &__slider-wrapper {
-    @include push--auto;
-    overflow: hidden;
-    width: rem(350);
-    border-radius: rem(6);
+  &__slide {
+    height: rem(420);
+    position: relative;
+    margin: 0 rem(15);
     box-shadow: 0 rem(10) rem(20) $color-shadow;
   }
-  &__slider-inner {
-    display: flex;
-    transition: all   .3s;
+  &__item-content {
+    padding: rem(40) rem(35) 0 rem(45);
   }
+  // &__slider-wrapper {
+  //   @include push--auto;
+  //   overflow: hidden;
+  //   width: rem(350);
+  //   border-radius: rem(6);
+  //   box-shadow: 0 rem(10) rem(20) $color-shadow;
+  // }
+  // &__slider-inner {
+  //   display: flex;
+  //   transition: all   .3s;
+  // }
   &__item-name {
     font-family: $ff-ebold;
     padding: rem(7) 0;
     text-align: center;
     line-height: rem(48);
     color: $color-main;
-    font-size: $fz-secondary;
+    font-size: rem($fz-secondary);
     background: $color-blue-light;
   }
-  &__item-content {
-    padding: rem(40) rem(33) rem(50) rem(30);
-  }
+
   &__item-title {
     font-family: $ff-bold;
-    font-size: $fz-subtitle;
+    font-size: rem($fz-subtitle);
     line-height: rem(40);
     margin-bottom: rem(32);
   }
   &__item-price {
     font-family: $ff-medium;
-    font-size: $fz-sbig;
-    margin-bottom: rem(46);
+    font-size: rem($fz-sbig);
+    margin-bottom: rem(80);
   }
   &__item-btn {
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: rem(40);
+    transform: translateX(-50%);
+    width: rem(270);
+  }
+}
+
+@media (max-width: 520px) {
+  .tariffs {
+    &__item-btn {
+      width: rem(200);
+    }
+  }
+}
+@media (max-width: 375px) {
+  .tariffs {
+    &__item-btn {
+      width: rem(270);
+    }
   }
 }

@@ -6,7 +6,6 @@ const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const postcss = require("gulp-postcss");
 const browsersync = require("browser-sync");
-
 const dist = "./dist";
 
 gulp.task("copy-html", () => {

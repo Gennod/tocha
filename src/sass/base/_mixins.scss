@@ -1,91 +1,105 @@
 @mixin push--auto {
-  margin: {
-    left: auto;
-    right: auto;
-  }
+    margin: {
+        left: auto;
+        right: auto;
+    }
 }
 @mixin dflex {
-  display: flex;
+    display: flex;
 }
 @mixin dflex-sb {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 @mixin dflex-sb-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 @mixin dflex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @mixin dflex-center-start-column {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 }
 
 @mixin button-reset {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 @mixin list-reset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 @mixin reset {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 @mixin below($width, $orientation: "width") {
-  @media screen and (max-#{$orientation}: $width) {
-    @content;
-  }
+    @media screen and (max-#{$orientation}: $width) {
+        @content;
+    }
 }
 
 @mixin dots {
-  &__dots {
-    @include dflex-sb-center;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    width: rem(54);
-  }
-  &__dot {
-    width: rem(10);
-    height: rem(10);
-    border-radius: 50%;
-    border: rem(2) solid $color-violet-light;
-    background: none;
-    cursor: pointer;
-    &--active {
-      border: none;
-      background: $color-main;
+    &-dots {
+        @include dflex-sb-center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        width: rem(54);
     }
-  }
+    &-dots li {
+        width: rem(10);
+        height: rem(10);
+        border-radius: 50%;
+        border: rem(2) solid $color-violet-light;
+        margin: 0 rem(2);
+    }
+    &-dots li button {
+      visibility: hidden;
+        background: none;
+        cursor: pointer;
+        list-style: none;
+        font-size: 0;
+        &-active {
+            border: none;
+            background: $color-main;
+        }
+    }
+    &-dots li.slick-active {
+        border: none;
+        width: rem(10);
+        height: rem(10);
+        border-radius: 50%;
+        border: rem(2) solid $color-violet-light;
+        background: $color-main;
+    }
 }
 
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
-  content: $content;
-  display: $display;
-  position: $pos;
+    content: $content;
+    display: $display;
+    position: $pos;
 }
 
 @function rem($num) {
-  $strip-unit: $num / ($num * 0 + 1);
-  @return $strip-unit / 16 * 1rem;
+    $strip-unit: $num / ($num * 0 + 1);
+    @return $strip-unit / 16 * 1rem;
 }

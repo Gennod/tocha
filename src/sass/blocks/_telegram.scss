@@ -7,6 +7,17 @@
     font-size: $fz-title;
     margin-bottom: rem(40);
   }
+  &__grid {
+    @include dflex-sb;
+    position: relative;
+    min-height: rem(750);
+  }
+  &__column {
+    width: rem(233);
+    &--big {
+      align-self: flex-end;
+    }
+  }
   &__step {
     @include dflex-center;
     @include push--auto;
@@ -29,6 +40,7 @@
   }
   &__slider {
     position: relative;
+    display: none;
   }
   &__slider-wrapper {
     @include push--auto;
@@ -41,10 +53,16 @@
     transition: all   .3s;
   }
 }
-@media (max-width: rem(350)) {
+@media (max-width: 350px) {
   .telegram {
     &__title {
       font-size: rem(33);
     }
   }
 }
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+} 

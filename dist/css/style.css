@@ -33,7 +33,9 @@
   font-style: normal;
   font-display: swap;
 }
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -78,6 +80,150 @@ html {
   position: relative;
   max-width: 71.25rem;
   padding: 0 0.9375rem;
+}
+
+.slick-list {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  border-radius: 0.375rem;
+}
+
+.slick-track {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.9375rem;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 3.375rem;
+}
+.slick-dots li {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  border: 0.125rem solid rgba(104, 94, 214, 0.5);
+  margin: 0 0.125rem;
+}
+.slick-dots li button {
+  visibility: hidden;
+  background: none;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0;
+}
+.slick-dots li button-active {
+  border: none;
+  background: #685ed6;
+}
+.slick-dots li.slick-active {
+  border: none;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  border: 0.125rem solid rgba(104, 94, 214, 0.5);
+  background: #685ed6;
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir=rtl] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
 }
 
 .btn {
@@ -139,7 +285,7 @@ html {
 }
 .header__descr {
   max-width: 30.125rem;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 .header__link {
@@ -149,12 +295,12 @@ html {
   color: #685ed6;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .header__content {
     max-width: 50%;
   }
 }
-@media (max-width: 21.875rem) {
+@media (max-width: 350px) {
   .header__content {
     text-align: center;
     max-width: 100%;
@@ -182,7 +328,7 @@ html {
 }
 .about__title {
   font-family: "Gilroy Bold";
-  font-size: 46px;
+  font-size: 2.875rem;
   margin-bottom: 4.25rem;
 }
 .about__list-item {
@@ -194,11 +340,11 @@ html {
 }
 .about__subtitle {
   font-family: "Gilroy SemiBold";
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-@media (max-width: 28.125rem) {
+@media (max-width: 450px) {
   .about__wrapper {
     display: flex;
     justify-content: center;
@@ -209,7 +355,7 @@ html {
     height: auto;
   }
 }
-@media (max-width: 21.875rem) {
+@media (max-width: 350px) {
   .about__title {
     margin-left: 1.25rem;
   }
@@ -221,7 +367,7 @@ html {
   padding-top: 6.25rem;
   text-align: center;
 }
-.tariffs__dots {
+.tariffs-dots {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -232,43 +378,54 @@ html {
   z-index: 2;
   width: 3.375rem;
 }
-.tariffs__dot {
+.tariffs-dots li {
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 50%;
   border: 0.125rem solid rgba(104, 94, 214, 0.5);
+  margin: 0 0.125rem;
+}
+.tariffs-dots li button {
+  visibility: hidden;
   background: none;
   cursor: pointer;
+  list-style: none;
+  font-size: 0;
 }
-.tariffs__dot--active {
+.tariffs-dots li button-active {
   border: none;
+  background: #685ed6;
+}
+.tariffs-dots li.slick-active {
+  border: none;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  border: 0.125rem solid rgba(104, 94, 214, 0.5);
   background: #685ed6;
 }
 .tariffs__title {
   font-family: "Gilroy ExtraBold";
-  font-size: 46px;
+  font-size: 2.875rem;
   margin-bottom: 1rem;
 }
 .tariffs__subtitle {
   font-family: "Gilroy Bold";
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 2.5rem;
 }
 .tariffs__slider {
   position: relative;
-  padding-bottom: 2.1875rem;
+  padding-bottom: 1.25rem;
 }
-.tariffs__slider-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  width: 21.875rem;
-  border-radius: 0.375rem;
+.tariffs__slide {
+  height: 26.25rem;
+  position: relative;
+  margin: 0 0.9375rem;
   box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.07);
 }
-.tariffs__slider-inner {
-  display: flex;
-  transition: all 0.3s;
+.tariffs__item-content {
+  padding: 2.5rem 2.1875rem 0 2.8125rem;
 }
 .tariffs__item-name {
   font-family: "Gilroy ExtraBold";
@@ -276,32 +433,43 @@ html {
   text-align: center;
   line-height: 3rem;
   color: #685ed6;
-  font-size: 24px;
+  font-size: 1.5rem;
   background: rgba(104, 94, 214, 0.05);
-}
-.tariffs__item-content {
-  padding: 2.5rem 2.0625rem 3.125rem 1.875rem;
 }
 .tariffs__item-title {
   font-family: "Gilroy Bold";
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 2.5rem;
   margin-bottom: 2rem;
 }
 .tariffs__item-price {
   font-family: "Gilroy Medium";
-  font-size: 20px;
-  margin-bottom: 2.875rem;
+  font-size: 1.25rem;
+  margin-bottom: 5rem;
 }
 .tariffs__item-btn {
-  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 2.5rem;
+  transform: translateX(-50%);
+  width: 16.875rem;
 }
 
+@media (max-width: 520px) {
+  .tariffs__item-btn {
+    width: 12.5rem;
+  }
+}
+@media (max-width: 375px) {
+  .tariffs__item-btn {
+    width: 16.875rem;
+  }
+}
 .telegram {
   padding: 3.375rem 0 3.75rem 0;
   text-align: center;
 }
-.telegram__dots {
+.telegram-dots {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -312,22 +480,48 @@ html {
   z-index: 2;
   width: 3.375rem;
 }
-.telegram__dot {
+.telegram-dots li {
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 50%;
   border: 0.125rem solid rgba(104, 94, 214, 0.5);
+  margin: 0 0.125rem;
+}
+.telegram-dots li button {
+  visibility: hidden;
   background: none;
   cursor: pointer;
+  list-style: none;
+  font-size: 0;
 }
-.telegram__dot--active {
+.telegram-dots li button-active {
   border: none;
+  background: #685ed6;
+}
+.telegram-dots li.slick-active {
+  border: none;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  border: 0.125rem solid rgba(104, 94, 214, 0.5);
   background: #685ed6;
 }
 .telegram__title {
   font-family: "Gilroy ExtraBold";
   font-size: 46px;
   margin-bottom: 2.5rem;
+}
+.telegram__grid {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  min-height: 46.875rem;
+}
+.telegram__column {
+  width: 14.5625rem;
+}
+.telegram__column--big {
+  align-self: flex-end;
 }
 .telegram__step {
   display: flex;
@@ -354,6 +548,7 @@ html {
 }
 .telegram__slider {
   position: relative;
+  display: none;
 }
 .telegram__slider-wrapper {
   margin-left: auto;
@@ -367,17 +562,23 @@ html {
   transition: all 0.3s;
 }
 
-@media (max-width: 21.875rem) {
+@media (max-width: 350px) {
   .telegram__title {
     font-size: 2.0625rem;
   }
 }
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .reviews {
   padding: 1.0625rem 0 5rem 0;
   text-align: center;
   background-color: rgba(242, 247, 255, 0.5);
 }
-.reviews__dots {
+.reviews-dots {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -388,21 +589,38 @@ html {
   z-index: 2;
   width: 3.375rem;
 }
-.reviews__dot {
+.reviews-dots li {
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 50%;
   border: 0.125rem solid rgba(104, 94, 214, 0.5);
+  margin: 0 0.125rem;
+}
+.reviews-dots li button {
+  visibility: hidden;
   background: none;
   cursor: pointer;
+  list-style: none;
+  font-size: 0;
 }
-.reviews__dot--active {
+.reviews-dots li button-active {
   border: none;
   background: #685ed6;
 }
+.reviews-dots li.slick-active {
+  border: none;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  border: 0.125rem solid rgba(104, 94, 214, 0.5);
+  background: #685ed6;
+}
+.reviews__item {
+  margin: 0 0.9375rem;
+}
 .reviews__title {
   font-family: "Gilroy ExtraBold";
-  font-size: 46px;
+  font-size: 2.875rem;
   line-height: 4rem;
   margin-bottom: 3rem;
 }
@@ -441,12 +659,12 @@ html {
 }
 .reviews__subtitle {
   font-family: "Gilroy Medium";
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 0.5rem;
   line-height: 1.75rem;
 }
 .reviews__text {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5rem;
 }
 .reviews__info {
@@ -460,27 +678,17 @@ html {
 }
 .reviews__name {
   font-family: "Gilroy Bold";
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 .reviews__site {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .reviews__slider {
   position: relative;
 }
-.reviews__slider-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  padding-bottom: 1.875rem;
-}
-.reviews__slider-inner {
-  display: flex;
-  transition: all 0.3s;
-}
 
-@media (max-width: 31.25rem) {
+@media (max-width: 500px) {
   .reviews__ico {
     display: none;
   }
@@ -502,7 +710,7 @@ html {
 }
 .connect__title {
   font-family: "Gilroy ExtraBold";
-  font-size: 33px;
+  font-size: 2.0625rem;
   color: white;
   line-height: 2.5625rem;
   margin-bottom: 2.125rem;
@@ -530,7 +738,7 @@ html {
   color: white;
 }
 
-@media (max-width: 22.5rem) {
+@media (max-width: 360px) {
   .connect__img {
     width: 50%;
     height: auto;
@@ -572,7 +780,7 @@ html {
 }
 .footer__logo-name {
   font-family: "Gilroy Bold";
-  font-size: 33px;
+  font-size: 2.0625rem;
   color: white;
 }
 .footer__column {
@@ -581,7 +789,7 @@ html {
 }
 .footer__column-name {
   font-family: "Gilroy Medium";
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #f4f5f7;
   line-height: 1.875rem;
   margin-bottom: 2rem;
@@ -601,7 +809,7 @@ html {
   color: #d9dbe1;
 }
 
-@media (max-width: 58.75rem) {
+@media (max-width: 940px) {
   .footer__top-wrapper {
     display: flex;
     justify-content: center;
@@ -615,7 +823,7 @@ html {
     margin-top: 1.875rem;
   }
 }
-@media (max-width: 53.125rem) {
+@media (max-width: 850px) {
   .footer__top-wrapper {
     flex-direction: column;
   }
@@ -628,7 +836,7 @@ html {
     text-align: center;
   }
 }
-@media (max-width: 40.625rem) {
+@media (max-width: 650px) {
   html {
     font-size: 12px;
   }

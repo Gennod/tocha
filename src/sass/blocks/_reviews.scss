@@ -3,10 +3,12 @@
   padding: rem(17) 0 rem(80) 0;
   text-align: center;
   background-color: $color-white-bg;
-
+  &__item {
+    margin: 0 rem(15);
+  }
   &__title {
     font-family: $ff-ebold;
-    font-size: $fz-title;
+    font-size: rem($fz-title);
     line-height: rem(64);
     margin-bottom: rem(48);
   }
@@ -43,12 +45,12 @@
   }
   &__subtitle {
     font-family: $ff-medium;
-    font-size: $fz-medium;
+    font-size: rem($fz-medium);
     margin-bottom: rem(8);
     line-height: rem(28);
   }
   &__text {
-    font-size: $fz-small;
+    font-size: rem($fz-small);
     line-height: rem(24);
   }
   &__info {
@@ -60,26 +62,17 @@
   }
   &__name {
     font-family: $ff-bold;
-    font-size: $fz-medium;
+    font-size: rem($fz-medium);
     line-height: rem(28);
   }
   &__site {
-    font-size: $fz-small;
+    font-size: rem($fz-small);
   }
   &__slider {
     position: relative;
   }
-  &__slider-wrapper {
-    @include push--auto;
-    overflow: hidden;
-    padding-bottom: rem(30);
-  }
-  &__slider-inner {
-    display: flex;
-    transition: all 0.3s;
-  }
 }
-@media (max-width: rem(500)) {
+@media (max-width: 500px) {
   .reviews {
     &__ico {
       display: none;

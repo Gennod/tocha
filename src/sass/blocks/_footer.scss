@@ -24,7 +24,7 @@
   }
   &__logo-name {
     font-family: $ff-bold;
-    font-size: $fz-connect;
+    font-size: rem($fz-connect);
     color: $color-white;
   }
   &__column {
@@ -33,7 +33,7 @@
   }
   &__column-name {
     font-family: $ff-medium;
-    font-size: $fz-sbig;
+    font-size: rem($fz-sbig);
     color: $color-white-light;
     line-height: rem(30);
     margin-bottom: rem(32);
@@ -54,7 +54,7 @@
   }
 }
 
-@media (max-width: rem(940)) {
+@media (max-width: 940px) {
   .footer {
     &__top-wrapper {
       @include dflex-center
@@ -66,7 +66,7 @@
     }
   }
 }
-@media (max-width: rem(850)) {
+@media (max-width: 850px) {
   .footer {
     &__top-wrapper {
       flex-direction: column;
@@ -81,7 +81,7 @@
     }
   }
 }
-@media (max-width: rem(650)) {
+@media (max-width: 650px) {
   html {
     font-size: 12px;
   }

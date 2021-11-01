@@ -23,7 +23,7 @@
   }
   &__descr {
     max-width: rem(482);
-    font-size: $fz-secondary;
+    font-size: rem($fz-secondary);
     margin-bottom: rem(32);
   }
   &__link {
@@ -35,14 +35,14 @@
     }
   }
 }
-@media (max-width: rem(768)) {
+@media (max-width: 768px) {
   .header {
     &__content {
       max-width: 50%;
     }
   }
 }
-@media (max-width: rem(350)) {
+@media (max-width: 350px) {
   .header {
     &__content {
       text-align: center;

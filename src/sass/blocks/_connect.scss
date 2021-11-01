@@ -11,7 +11,7 @@
   }
   &__title {
     font-family: $ff-ebold;
-    font-size: $fz-connect;
+    font-size: rem($fz-connect);
     color: $color-white;
     line-height: rem(41);
     margin-bottom: rem(34);
@@ -39,7 +39,7 @@
     }
   }
 }
-@media (max-width: rem(360)) {
+@media (max-width: 360px) {
 
   .connect {
     &__img {

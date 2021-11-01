@@ -12,7 +12,7 @@
   }
   &__title {
     font-family: $ff-bold;
-    font-size: $fz-title;
+    font-size: rem($fz-title);
     margin-bottom: rem(68);
   }
   &__list-item {
@@ -24,12 +24,12 @@
   }
   &__subtitle {
     font-family: $ff-sbold;
-    font-size: $fz-secondary;
+    font-size: rem($fz-secondary);
     margin-bottom: rem(8);
   }
 }
 
-@media (max-width: rem(450)) {
+@media (max-width: 450px) {
   .about {
     &__wrapper {
       @include dflex-center;
@@ -40,7 +40,7 @@
     }
   }
 }
-@media (max-width: rem(350)) {
+@media (max-width: 350px) {
   .about {
     &__title{
       margin-left: rem(20);
