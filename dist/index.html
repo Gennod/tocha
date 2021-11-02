@@ -11,6 +11,13 @@
 
 <body>
     <header class="header">
+        <div class="header__popup">
+            <nav class="header__menu">
+                <button class="header__menu-btn btn btn--active">Вход</button>
+                <button class="header__menu-btn btn">Регистрация</button>
+            </nav>
+            <div class="header__cross"></div>
+        </div>
         <div class="container">
             <div class="header__top">
                 <div class="header__logo">
@@ -22,6 +29,11 @@
                     <button class="header__btn btn btn--active">Вход</button>
                     <button class="header__btn btn">Регистрация</button>
                 </nav>
+                <div class="header__burger">
+                    <span class="header__line header__line--first"></span>
+                    <span class="header__line header__line--second"></span>
+                    <span class="header__line header__line--third"></span>
+                </div>
             </div>
             <div class="header__content">
                 <h1 class="header__title">
@@ -35,6 +47,7 @@
                 <a href="#" class="header__link btn">Подключить</a>
             </div>
         </div>
+        <img class="header__bg" src="./assets/img/header-bg.png" alt="main-bg">
     </header>
 
     <main class="content">
@@ -285,7 +298,7 @@
                                         <a class="footer__link" href="#">Центр поддержки</a>
                                     </li>
                                     <li class="footer__item">
-                                        <a class="footer__link" href="#">Политика конфеденциальности</a>
+                                        <a class="footer__link" href="#">Политика<br> конфеденциальности</a>
                                     </li>
                                     <li class="footer__item">
                                         <a class="footer__link" href="#">Документы оферта</a>

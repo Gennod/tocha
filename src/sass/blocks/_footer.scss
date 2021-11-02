@@ -4,12 +4,15 @@
     background-color: $color-footer-top;
   }
   &__top-wrapper {
-    @include dflex-sb;
+    @include dflex;
+    justify-content: flex-end;
+    position: relative;
     flex-wrap: wrap;
   }
   &__nav {
     @include dflex-sb;
     padding-right: rem(190);
+    text-align: left;
   }
   &__bottom {
     padding: rem(25) 0;
@@ -17,6 +20,9 @@
   }
   &__logo {
     @include dflex-center-start-column;
+    position: absolute;
+    top: 0;
+    left: rem(10);
   }
   &__img {
     width: rem(80);
@@ -54,35 +60,25 @@
   }
 }
 
-@media (max-width: 940px) {
-  .footer {
-    &__top-wrapper {
-      @include dflex-center
-    }
-    &__nav {
-      @include dflex-center;
-      flex-wrap: wrap;
-      margin-top: rem(30);
-    }
-  }
-}
 @media (max-width: 850px) {
   .footer {
-    &__top-wrapper {
-      flex-direction: column;
-    }
     &__nav {
       padding-right: 0;
       text-align: left;
     }
     &__column {
-      margin: rem(30);
-      text-align: center;
+      margin-left: rem(80);
     }
   }
 }
-@media (max-width: 650px) {
-  html {
-    font-size: 12px;
+@media (max-width: 375px) {
+  .footer {
+    &__top-wrapper {
+      justify-content: center;
+
+    }
+    &__nav {
+      flex-direction: column;
+    }
   }
 }

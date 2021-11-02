@@ -57,23 +57,25 @@
 
 @mixin dots {
     &-dots {
-        @include dflex-sb-center;
+        @include dflex-center;
         position: absolute;
-        bottom: 0;
+        bottom: rem(-15);
         left: 50%;
         transform: translateX(-50%);
         z-index: 2;
-        width: rem(54);
+        width: 100%;
     }
     &-dots li {
-        width: rem(10);
-        height: rem(10);
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         border: rem(2) solid $color-violet-light;
-        margin: 0 rem(2);
+        list-style: none;
+        margin: 0 6px;
+        cursor: pointer;
     }
     &-dots li button {
-      visibility: hidden;
+        visibility: hidden;
         background: none;
         cursor: pointer;
         list-style: none;
@@ -85,11 +87,15 @@
     }
     &-dots li.slick-active {
         border: none;
-        width: rem(10);
-        height: rem(10);
         border-radius: 50%;
         border: rem(2) solid $color-violet-light;
         background: $color-main;
+    }
+    @media (max-width: 375px) {
+        &-dots li {
+            width: 20px;
+            height: 20px;
+        }
     }
 }
 

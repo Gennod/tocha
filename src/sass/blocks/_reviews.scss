@@ -1,10 +1,12 @@
 .reviews {
-  @include dots;
   padding: rem(17) 0 rem(80) 0;
   text-align: center;
   background-color: $color-white-bg;
+  .slick-dots {
+    bottom: rem(-20);
+  }
   &__item {
-    margin: 0 rem(15);
+    margin: 0 5px;
   }
   &__title {
     font-family: $ff-ebold;

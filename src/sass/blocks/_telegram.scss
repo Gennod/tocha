@@ -68,26 +68,17 @@
 }
 @media (max-width: 768px) {
   .telegram {
-    &__descr {
-      margin-bottom: 0;
-    }
     &__grid {
       grid-template-columns: repeat(3, 1fr);
       column-gap: 27px;
     }
     &__img {
+      @include push--auto;
       width: 200px;
     }
   }
   .lines {
     display: none;
-  }
-}
-@media (max-width: 670px) {
-  .telegram {
-    &__img {
-      @include push--auto;
-    }
   }
 }
 @media (max-width: 350px) {

@@ -7,17 +7,17 @@
   }
   &__content {
     padding-top: rem(27);
-    max-width: rem(522);
     margin-right: rem(76);
   }
   &__title {
     font-family: $ff-bold;
-    font-size: rem($fz-title);
+    font-size: rem($fz-connect);
     margin-bottom: rem(68);
   }
   &__list-item {
     @include dflex;
     margin-bottom: rem(48);
+    padding-left: rem(15);
   }
   &__icon {
     margin-right: rem(26);
@@ -40,13 +40,23 @@
     }
   }
 }
+@media (max-width: 375px) {
+  .about {
+    &__list-item {
+      align-items: center;
+    }
+    &__content {
+      margin-right: 0;
+    }
+    &__img {
+      width: rem(244);
+    }
+  }
+}
 @media (max-width: 350px) {
   .about {
     &__title{
       margin-left: rem(20);
-    }
-    &__img {
-      width: rem(300);
     }
   }
 }

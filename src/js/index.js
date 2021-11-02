@@ -2,7 +2,11 @@ import $ from "jquery";
 
 const grid = document.createElement("div"),
     slider = document.createElement("div"),
-    container = document.querySelectorAll(".container")[3];
+    container = document.querySelectorAll(".container")[3],
+    burger = document.querySelector('.header__burger'),
+    popup = document.querySelector('.header__popup'),
+    cross = document.querySelector('.header__cross');
+
 
 grid.innerHTML = `
   <div class="telegram__grid">
@@ -63,6 +67,18 @@ if (window.innerWidth <= 670) {
   container.append(grid);
 }
 
+burger.addEventListener('click', () => {
+    popup.classList.add("visible");
+    document.body.style.overflow = "hidden";
+})
+
+
+cross.addEventListener('click', () => {
+    popup.classList.remove("visible");
+    document.body.style.overflow = "";
+    
+})
+
 $(document).ready(function () {
     $(".tariffs__slider").slick({
         infinite: true,
@@ -81,7 +97,7 @@ $(document).ready(function () {
                 },
             },
             {
-                breakpoint: 375,
+                breakpoint: 376,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,

@@ -2,25 +2,27 @@
   padding: rem(90) 0;
   &__wrapper {
     @include dflex;
-    flex-wrap: wrap;
     background: url("../assets/img/connect-bg.jpg") center center/cover no-repeat;
-    padding: rem(48) 0 0 rem(90);
+    padding: rem(48) rem(30) rem(90) rem(320);
+    position: relative;
   }
   &__content {
     max-width: rem(445);
   }
   &__title {
     font-family: $ff-ebold;
-    font-size: rem($fz-connect);
+    font-size: rem($fz-secondary);
     color: $color-white;
-    line-height: rem(41);
+    line-height: rem(33);
     margin-bottom: rem(34);
   }
   &__img {
-    width: rem(300);
+    width: rem(320);
     height: rem(260);
-    object-fit: cover;
-    margin-right: rem(100);
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   &__form {
     @include dflex;
@@ -29,6 +31,8 @@
     padding: rem(14) rem(16);
     border: none;
     outline: none;
+    border-radius: 5px;
+    width: 100%;
   }
   &__btn {
     padding: rem(14) rem(24);
@@ -39,18 +43,19 @@
     }
   }
 }
-@media (max-width: 360px) {
-
+@media (max-width: 500px) {
   .connect {
+    &__wrapper {
+      justify-content: center;
+      padding: rem(300) rem(18) rem(40) rem(30);
+    }
     &__img {
-      width: 50%;
-      height: auto;
-    }
-    &__form {
-      flex-wrap: wrap;
-    }
-    &__btn {
-      margin-top: rem(15);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      object-fit: cover;
+      width: rem(350);
+      height: rem(280);
     }
   }
 }

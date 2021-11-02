@@ -1,59 +1,167 @@
 .header {
-  height: 100vh;
-  background: url("../assets/img/main-bg.jpg") center center/cover no-repeat;
-  padding-top: rem(32);
-  &__top {
-    @include dflex-sb-center;
-    margin-bottom: rem(123);
-  }
-  &__logo {
-    @include dflex-center;
-    font-family: $ff-bold;
-    font-size: rem(28);
-  }
-  &__btns {
-    @include dflex-sb-center;
-  }
-  &__btn + &__btn {
-    margin-left: rem(12);
-  }
-  &__title {
-    font-family: $ff-ebold;
-    font-size: rem($fz-big);
-  }
-  &__descr {
-    max-width: rem(482);
-    font-size: rem($fz-secondary);
-    margin-bottom: rem(32);
-  }
-  &__link {
-    max-width: rem(168);
-  }
-  &__text {
-    &--violet {
-      color: $color-main;
+    height: 100vh;
+    background: url("../assets/img/main-bg.jpg") center center/cover no-repeat;
+    padding-top: rem(32);
+    position: relative;
+    &__popup {
+        padding: rem(76) rem(30);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $color-white-popup;
+        z-index: 2;
+        opacity: 0;
+        transition: all 0.5s;
+        transform: translateX(-100%);
     }
-  }
-}
-@media (max-width: 768px) {
-  .header {
-    &__content {
-      max-width: 50%;
+    &__cross {
+        position: absolute;
+        top: rem(25);
+        right: rem(25);
+        width: rem(28);
+        height: rem(28);
+        cursor: pointer;
+        &:before {
+            @include pseudo;
+            height: rem(3);
+            width: rem(40);
+            background-color: $color-main;
+            border-radius: rem(2);
+            transform: translate(-20%, rem(9)) rotate(45deg);
+        }
+        &:after {
+            @include pseudo;
+            height: rem(3);
+            width: rem(40);
+            background-color: $color-main;
+            border-radius: rem(2);
+            transform: translate(-20%, rem(9)) rotate(-45deg);
+        }
+        
     }
-  }
-}
-@media (max-width: 350px) {
-  .header {
-    &__content {
-      text-align: center;
-      max-width: 100%;  
+    &__menu {
+        @include dflex;
+        flex-direction: column;
+    }
+    &__menu-btn {
+        margin-bottom: rem(10);
+    }
+    &__burger {
+        display: block;
+        position: relative;
+        width: rem(30);
+        height: rem(18);
+        cursor: pointer;
+        display: none;
+    }
+    &__line {
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        display: block;
+        &--first {
+            background-color: $color-main;
+        }
+        &--second {
+            background-color: $btn-hover-alt;
+            margin: 6px 0;
+        }
+        &--third {
+            background-color: $color-cyan;
+        }
+    }
+    &__bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: rem(230);
+        object-fit: contain;
+        display: none;
+    }
+    &__top {
+        @include dflex-sb-center;
+        margin-bottom: rem(123);
+    }
+    &__logo {
+        @include dflex-center;
+        font-family: $ff-bold;
+        font-size: rem($fz-subtitle);
     }
     &__btns {
-      justify-content: flex-end;
-      flex-wrap: wrap;
+        @include dflex-sb-center;
+    }
+    &__btn + &__btn {
+        margin-left: rem(12);
+    }
+    &__title {
+        font-family: $ff-ebold;
+        font-size: rem($fz-big);
+    }
+    &__descr {
+        max-width: rem(482);
+        font-size: rem($fz-secondary);
+        margin-bottom: rem(32);
     }
     &__link {
-      max-width: 100%;
+        max-width: rem(168);
     }
-  }
+    &__text {
+        &--violet {
+            color: $color-main;
+        }
+    }
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .header {
+        &__content {
+            max-width: 50%;
+        }
+    }
+}
+@media (max-width: 375px) {
+    .header {
+        background: $color-white-bg;
+        &__burger {
+            display: block;
+        }
+        &__bg {
+            display: block;
+        }
+        &__content {
+            max-width: 100%;
+        }
+        &__btns {
+            display: none;
+        }
+        &__title {
+            font-size: rem($fz-connect);
+        }
+        &__descr {
+            font-size: rem($fz-medium);
+        }
+    }
+}
+@media (max-width: 350px) {
+    .header {
+        &__content {
+            text-align: center;
+            max-width: 100%;
+        }
+        &__btns {
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+        &__link {
+            max-width: 100%;
+        }
+    }
 }
