@@ -52,6 +52,7 @@ html {
 .slick-track {
     @include dflex-sb;
     padding-bottom: rem(15);
+    width: 100%;
 }
 
 

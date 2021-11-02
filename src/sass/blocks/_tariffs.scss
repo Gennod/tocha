@@ -19,23 +19,12 @@
   &__slide {
     height: rem(420);
     position: relative;
-    margin: 0 rem(15);
+    margin: 0 10px;
     box-shadow: 0 rem(10) rem(20) $color-shadow;
   }
   &__item-content {
-    padding: rem(40) rem(35) 0 rem(45);
+    padding: rem(40) rem(25) 0 rem(25);
   }
-  // &__slider-wrapper {
-  //   @include push--auto;
-  //   overflow: hidden;
-  //   width: rem(350);
-  //   border-radius: rem(6);
-  //   box-shadow: 0 rem(10) rem(20) $color-shadow;
-  // }
-  // &__slider-inner {
-  //   display: flex;
-  //   transition: all   .3s;
-  // }
   &__item-name {
     font-family: $ff-ebold;
     padding: rem(7) 0;

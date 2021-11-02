@@ -1,6 +1,6 @@
 .telegram {
   @include dots;
-  padding: rem(54) 0 rem(60) 0;
+  padding: rem(54) 0 rem(120) 0;
   text-align: center;
   &__title {
     font-family: $ff-ebold;
@@ -8,14 +8,15 @@
     margin-bottom: rem(40);
   }
   &__grid {
-    @include dflex-sb;
+    display: grid;
+    grid-template-columns: repeat(3, rem(270));
+    column-gap: rem(150);
     position: relative;
-    min-height: rem(750);
   }
   &__column {
-    width: rem(233);
     &--big {
-      align-self: flex-end;
+      transform: translateY(12%);
+      align-self: flex-start;
     }
   }
   &__step {
@@ -38,19 +39,55 @@
   &__descr {
     margin-bottom: rem(30);
   }
-  &__slider {
-    position: relative;
+  &__img {
+    object-fit: contain;
+    width: rem(270);
+    height: rem(550);
+  }
+}
+
+@media (max-width: 1200px) {
+  .telegram {
+    &__subtitle {
+      margin-bottom: rem(10);
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .telegram {
+    &__column {
+      &--big {
+        transform: none;
+      }
+    }
+  }
+  .lines {
     display: none;
   }
-  &__slider-wrapper {
-    @include push--auto;
-    overflow: hidden;
-    width: rem(280);
-    padding-bottom: rem(30);
+}
+@media (max-width: 768px) {
+  .telegram {
+    &__descr {
+      margin-bottom: 0;
+    }
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 27px;
+    }
+    &__img {
+      width: 200px;
+    }
   }
-  &__slider-inner {
-    display: flex;
-    transition: all   .3s;
+  .lines {
+    display: none;
+  }
+}
+@media (max-width: 670px) {
+  .telegram {
+    &__img {
+      @include push--auto;
+    }
   }
 }
 @media (max-width: 350px) {
