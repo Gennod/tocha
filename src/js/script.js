@@ -1,5 +1,3 @@
-import $ from "jquery";
-
 const grid = document.createElement("div"),
     slider = document.createElement("div"),
     container = document.querySelectorAll(".container")[3],
