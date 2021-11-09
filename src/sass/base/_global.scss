@@ -1,10 +1,5 @@
 @use "sass:math";
 
-*,
-::before,
-::after {
-    @include reset;
-}
 
 ul {
     @include list-reset;
