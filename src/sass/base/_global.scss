@@ -3,7 +3,7 @@
 *,
 ::before,
 ::after {
-    @include reset;
+    box-sizing: border-box;
 }
 
 ul {
