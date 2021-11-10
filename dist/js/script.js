@@ -67,15 +67,7 @@ slider.innerHTML = `
         alt="iphoneX-3">
 </div>
 </div>
-</div>
 `;
-
-if (window.innerWidth <= 670) {
-  container.append(slider);
-} else {
-  container.append(grid);
-}
-
 burger.addEventListener('click', () => {
   popup.classList.add("visible");
   document.body.style.overflow = "hidden";

@@ -7,6 +7,9 @@
     font-size: $fz-title;
     margin-bottom: rem(40);
   }
+  &__slider {
+    display: none;
+  }
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, rem(270));
@@ -80,6 +83,17 @@
   .lines {
     display: none;
   }
+}
+@media (max-width: 670px) {
+  .telegram {
+    &__grid {
+      display: none;
+    }
+    &__slider {
+      display: block;
+    }
+  }
+
 }
 @media (max-width: 350px) {
   .telegram {

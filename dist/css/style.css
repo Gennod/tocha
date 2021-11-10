@@ -605,6 +605,9 @@ html {
   font-size: 46px;
   margin-bottom: 2.5rem;
 }
+.telegram__slider {
+  display: none;
+}
 .telegram__grid {
   display: grid;
   grid-template-columns: repeat(3, 16.875rem);
@@ -671,6 +674,14 @@ html {
 
   .lines {
     display: none;
+  }
+}
+@media (max-width: 670px) {
+  .telegram__grid {
+    display: none;
+  }
+  .telegram__slider {
+    display: block;
   }
 }
 @media (max-width: 350px) {
