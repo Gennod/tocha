@@ -8,7 +8,8 @@ const burger = document.querySelector('.header__burger'),
       loginBtn = document.querySelectorAll('[data-login]'),
       exitBtn = document.querySelectorAll('[data-exit]'),
       registrationBtn = document.querySelectorAll('[data-registration]'),
-      headerBtns = document.querySelector('.header__btns');
+      headerBtns = document.querySelector('.header__btns'),
+      headerList = document.querySelector('.header__list');
 loginBtn.forEach(btn => {
   btn.addEventListener('click', e => {
     e.preventDefault();
@@ -61,6 +62,22 @@ popup.addEventListener('click', e => {
     exitBtn.forEach(btn => btn.style.display = 'block');
     burger.style.display = 'none';
     headerBtns.style.display = 'flex';
+    headerList.style.display = "flex";
+
+    if (document.body.clientWidth <= 375) {
+      burger.style.display = 'block';
+      headerList.style.display = "none";
+      popup.innerHTML = `
+                <div class="container">
+                    <ul class="header__list-popup">
+                        <li class="header__list-item header__list-item--active"><a href="#" class="header__list-link">Подключение</a></li>
+                        <li class="header__list-item"><a href="#" class="header__list-link">Оплата</a></li>
+                        <li class="header__list-item"><a href="#" class="header__list-link">Контакты</a></li>
+                        <li class="header__list-item"><a href="#" class="header__list-link" data-exit>Выход</a></li>
+                    /ul>
+                </div>
+            `;
+    }
   }
 });
 burger.addEventListener('click', () => {
@@ -103,6 +120,7 @@ function exit(btn) {
   } else {
     burger.style.display = 'none';
     headerBtns.style.display = 'flex';
+    headerList.style.display = "none";
   }
 }
 

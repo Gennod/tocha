@@ -66,9 +66,6 @@
       padding-right: 0;
       text-align: left;
     }
-    &__column {
-      margin-left: rem(80);
-    }
   }
 }
 @media (max-width: 375px) {
@@ -79,6 +76,20 @@
     }
     &__nav {
       flex-direction: column;
+    }
+    &__img {
+      width: rem(70);
+      height: auto;
+    }
+    &__logo-name {
+      font-size: rem(32);
+    }
+    &__column-name {
+      margin-top: 0;
+      margin-bottom: rem(16);
+    }
+    &__descr {
+      padding-left: rem(20);
     }
   }
 }

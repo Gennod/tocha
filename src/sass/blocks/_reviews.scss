@@ -19,13 +19,6 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: rem(30);
   }
-  &__ico {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: rem(142);
-    height: rem(120);
-  }
   &__text-wrapper {
     background-color: $color-white;
     box-shadow: 0 rem(10) rem(20) $color-shadow;
@@ -72,12 +65,41 @@
   }
   &__slider {
     position: relative;
+    &::before {
+      @include pseudo;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateY(-100%);
+      z-index: 1;
+      width: rem(142);
+      height: rem(120);
+      background: url("../assets/icons/reviews-icon-dizk.svg") center center/cover no-repeat;
+    }
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 375px) {
   .reviews {
-    &__ico {
-      display: none;
+    position: relative;
+    &__title {
+      font-size: rem(32);
+      margin-bottom: rem(40);
+    }
+    &__subtitle {
+      font-size: rem(18);
+    }
+    &__text {
+      font-size: rem(14);
+    }
+    &__slider {
+      position: unset;
+      &::before {
+        top: rem(16);
+        right: rem(23);
+        width: rem(50);
+        height: rem(50);
+        background-size: contain;
+      }
     }
     &__list {
       grid-template-columns: 1fr;

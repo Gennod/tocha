@@ -32,12 +32,18 @@
                         /></a>
                         <div class="header__logo-name">tocha</div>
                     </div>
+                    
                     <nav class="header__btns">
                         <button class="header__btn btn btn--active" data-login>
                             Вход
                         </button>
                         <button class="header__btn btn" data-registration>Регистрация</button>
-                        <button class="header__btn btn btn--hidden" data-exit>Выход</button>
+                        <ul class="header__list">
+                            <li class="header__list-item header__list-item--active"><a href="#" class="header__list-link">Подключение</a></li>
+                            <li class="header__list-item"><a href="#" class="header__list-link">Оплата</a></li>
+                            <li class="header__list-item"><a href="#" class="header__list-link">Контакты</a></li>
+                            <li class="header__list-item"><a href="#" class="header__list-link" data-exit>Выход</a></li>
+                        </ul>
                     </nav>
                     <button class="header__burger">
                         <span class="header__line"></span>
@@ -314,13 +320,13 @@
             </section>
             <section class="reviews">
                 <div class="container">
-                    <img
+                    <!-- <img
                         width="142"
                         height="120"
                         class="reviews__ico"
                         alt="icon-dizk"
                         src="./assets/icons/reviews-icon-dizk.svg"
-                    />
+                    /> -->
                     <h2 class="reviews__title">Отзывы клиентов</h2>
                     <ul class="reviews__slider">
                         <li class="reviews__item">

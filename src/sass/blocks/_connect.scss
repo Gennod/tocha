@@ -50,6 +50,13 @@
       padding: rem(300) rem(18) rem(40) rem(30);
       overflow: hidden;
     }
+    &__form {
+      flex-wrap: wrap;
+    }
+    &__btn {
+      @include push--auto;
+      margin-top: rem(10);
+    }
     &__img {
       top: 0;
       left: 50%;

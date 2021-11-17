@@ -1,7 +1,7 @@
 .header {
-    height: 100vh;
+    min-height: 350px;
     background: url("../assets/img/main-bg.jpg") center center/cover no-repeat;
-    padding-top: rem(32);
+    padding: rem(32) 0 rem(60) 0;
     position: relative;
     &__popup {
         padding: rem(76) rem(30);
@@ -25,6 +25,23 @@
     &__registration-form {
         @include dflex;
         flex-direction: column;
+    }
+    &__list {
+        @include dflex-sb-center;
+        display: none;
+
+    }
+    &__list-item {
+        font-size: rem($fz-sbig);
+        margin-left: rem(60);
+        transition: all 0.3s;
+        &--active {
+            font-family: $ff-bold;
+            color: $color-main;
+        }
+        &:hover {
+            color: $color-main;
+        }
     }
     &__input {
         @include push--auto;
@@ -105,13 +122,11 @@
         }
     }
     &__bg {
-        position: absolute;
-        bottom: rem(-60);
-        left: 0;
         width: 100%;
         height: rem(230);
         object-fit: contain;
         display: none;
+        margin-top: rem(50);
     }
     &__top {
         @include dflex-sb-center;
@@ -152,13 +167,32 @@
     transform: translateX(0);
 }
 
+@media (max-height: 1200px) {
+    .header {
+        min-height: 350px;
+    }
+}
+
+@media (max-height: 768px) {
+    .header {
+        min-height: 600px;
+    }
+}
+
 @media (max-width: 768px) {
     .header {
+        &__top {
+            margin-bottom: 0;
+        }
+        &__title {
+            margin-top: rem(20);
+        }
         &__content {
             max-width: 50%;
         }
     }
 }
+
 @media (max-width: 375px) {
     .header {
         background: $color-white-bg;
