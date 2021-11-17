@@ -18,4 +18,11 @@
     background: $color-main-light;
     color: $color-main;
   }
+  &--hidden {
+    display: none;
+  }
+  &--centered {
+    @include push--auto;
+    display: block;
+  }
 }

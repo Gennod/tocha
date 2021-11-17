@@ -16,6 +16,28 @@
         transition: all 0.5s;
         transform: translateX(-100%);
     }
+    &__popup-message {
+        font-family: $ff-ebold;
+        text-align: center;
+        font-size: rem($fz-title);
+        color: $color-main;
+    }
+    &__registration-form {
+        @include dflex;
+        flex-direction: column;
+    }
+    &__input {
+        @include push--auto;
+        padding: rem(14) rem(16);
+        margin-bottom: rem(10);
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        width: 100%;
+        &:focus {
+            border: 1px solid $color-main;
+        }
+    }
     &__cross {
         position: absolute;
         top: rem(25);
@@ -140,6 +162,9 @@
 @media (max-width: 375px) {
     .header {
         background: $color-white-bg;
+        &__popup-message {
+            font-size: rem(30);
+        }
         &__burger {
             display: block;
         }

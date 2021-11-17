@@ -257,6 +257,14 @@ html {
   background: #f1e4ff;
   color: #685ed6;
 }
+.btn--hidden {
+  display: none;
+}
+.btn--centered {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 
 .header {
   height: 100vh;
@@ -276,6 +284,29 @@ html {
   opacity: 0;
   transition: all 0.5s;
   transform: translateX(-100%);
+}
+.header__popup-message {
+  font-family: "Gilroy ExtraBold";
+  text-align: center;
+  font-size: 2.875rem;
+  color: #685ed6;
+}
+.header__registration-form {
+  display: flex;
+  flex-direction: column;
+}
+.header__input {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.875rem 1rem;
+  margin-bottom: 0.625rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+}
+.header__input:focus {
+  border: 1px solid #685ed6;
 }
 .header__cross {
   position: absolute;
@@ -409,6 +440,9 @@ html {
 @media (max-width: 375px) {
   .header {
     background: rgba(242, 247, 255, 0.5);
+  }
+  .header__popup-message {
+    font-size: 1.875rem;
   }
   .header__burger {
     display: block;

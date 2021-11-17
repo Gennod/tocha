@@ -12,10 +12,10 @@
         <header class="header">
             <div class="header__popup">
                 <nav class="header__menu">
-                    <button class="header__menu-btn btn btn--active">
+                    <button class="header__menu-btn btn btn--active" data-login>
                         Вход
                     </button>
-                    <button class="header__menu-btn btn">Регистрация</button>
+                    <button class="header__menu-btn btn" data-registration>Регистрация</button>
                 </nav>
                 <div class="header__cross"></div>
             </div>
@@ -33,10 +33,11 @@
                         <div class="header__logo-name">tocha</div>
                     </div>
                     <nav class="header__btns">
-                        <button class="header__btn btn btn--active">
+                        <button class="header__btn btn btn--active" data-login>
                             Вход
                         </button>
-                        <button class="header__btn btn">Регистрация</button>
+                        <button class="header__btn btn" data-registration>Регистрация</button>
+                        <button class="header__btn btn btn--hidden" data-exit>Выход</button>
                     </nav>
                     <button class="header__burger">
                         <span class="header__line"></span>

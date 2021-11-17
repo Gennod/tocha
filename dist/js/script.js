@@ -5,15 +5,139 @@ var __webpack_exports__ = {};
   \**************************/
 const burger = document.querySelector('.header__burger'),
       popup = document.querySelector('.header__popup'),
-      cross = document.querySelector('.header__cross');
+      loginBtn = document.querySelectorAll('[data-login]'),
+      exitBtn = document.querySelectorAll('[data-exit]'),
+      registrationBtn = document.querySelectorAll('[data-registration]'),
+      headerBtns = document.querySelector('.header__btns');
+loginBtn.forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    login(e.target);
+  });
+});
+exitBtn.forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    exit(e.target);
+  });
+});
+registrationBtn.forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    registration(e.target);
+  });
+});
+popup.addEventListener('click', e => {
+  if (e.target.classList.contains("header__cross")) {
+    isPopup(false);
+    popup.innerHTML = `
+        <nav class="header__menu">
+            <button class="header__menu-btn btn btn--active" data-login>
+                Вход
+            </button>
+            <button class="header__menu-btn btn" data-registration>Регистрация</button>
+        </nav>
+        <div class="header__cross"></div>
+        `;
+  }
+
+  if (e.target.hasAttribute("data-exit")) {
+    exit(e.target);
+  }
+
+  if (e.target.hasAttribute("data-login")) {
+    login(e.target);
+  }
+
+  if (e.target.hasAttribute("data-registration")) {
+    registration(e.target);
+  }
+
+  if (e.target.hasAttribute("data-logged")) {
+    e.preventDefault();
+    isPopup(false);
+    loginBtn.forEach(btn => btn.style.display = 'none');
+    registrationBtn.forEach(btn => btn.style.display = 'none');
+    exitBtn.forEach(btn => btn.style.display = 'block');
+    burger.style.display = 'none';
+    headerBtns.style.display = 'flex';
+  }
+});
 burger.addEventListener('click', () => {
-  popup.classList.add("visible");
-  document.body.style.overflow = "hidden";
+  isPopup(true);
 });
-cross.addEventListener('click', () => {
-  popup.classList.remove("visible");
-  document.body.style.overflow = "";
-});
+
+function login(btn) {
+  isPopup(true);
+  popup.innerHTML = `
+    <div class="container">
+        <p class="header__popup-message">Вход</p>
+        <form class="header__registration-form">
+            <input class="header__input" type="email" placeholder="Введите e-mail" name="email">
+            <input class="header__input" type="password" placeholder="Введите пароль" name="password">
+            <button class="header__btn btn" data-logged>Войти</button>
+        </form>
+    </div>
+    <div class="header__cross"></div>
+    `;
+}
+
+function exit(btn) {
+  isPopup(false);
+  loginBtn.forEach(btn => btn.style.display = 'block');
+  registrationBtn.forEach(btn => btn.style.display = 'block');
+  exitBtn.forEach(btn => btn.style.display = 'none');
+  popup.innerHTML = `
+    <nav class="header__menu">
+        <button class="header__menu-btn btn btn--active" data-login>
+            Вход
+        </button>
+        <button class="header__menu-btn btn" data-registration>Регистрация</button>
+    </nav>
+    <div class="header__cross"></div>
+    `;
+
+  if (document.body.clientWidth <= 375) {
+    burger.style.display = 'block';
+    headerBtns.style.display = 'none';
+  } else {
+    burger.style.display = 'none';
+    headerBtns.style.display = 'flex';
+  }
+}
+
+function registration(btn) {
+  isPopup(true);
+  loginBtn.forEach(btn => btn.style.display = 'block');
+  btn.style.display = 'block';
+  exitBtn.forEach(btn => btn.style.display = 'none');
+  popup.innerHTML = `
+    <div class="container">
+        <p class="header__popup-message">Регистрация</p>
+        <form class="header__registration-form">
+            <input class="header__input" type="text" placeholder="Введите Имя" name="name">
+            <input class="header__input" type="text" placeholder="Введите Фамилию" name="surname">
+            <input class="header__input" type="email" placeholder="Введите e-mail" name="email">
+            <input class="header__input" type="password" placeholder="Введите пароль" name="password">
+            <button class="btn" type="submit" data-logged>
+                Зарегистрироваться
+            </button>
+        </form>
+    </div>
+    <div class="header__cross"></div>
+    `;
+}
+
+function isPopup(toggle) {
+  if (toggle) {
+    popup.classList.add("visible");
+    document.body.style.overflow = "hidden";
+  } else {
+    popup.classList.remove("visible");
+    document.body.style.overflow = "";
+  }
+}
+
 $(document).ready(function () {
   $(".tariffs__slider").slick({
     infinite: true,
