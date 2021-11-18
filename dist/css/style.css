@@ -267,7 +267,7 @@ html {
 }
 
 .header {
-  min-height: 350px;
+  min-height: 100vh;
   background: url("../assets/img/main-bg.jpg") center center/cover no-repeat;
   padding: 2rem 0 3.75rem 0;
   position: relative;
@@ -448,22 +448,20 @@ html {
   transform: translateX(0);
 }
 
-@media (max-height: 1200px) {
+@media (max-width: 1024px) {
   .header {
-    min-height: 350px;
+    min-height: 768px;
   }
 }
-@media (max-height: 768px) {
+@media (max-width: 769px) {
   .header {
-    min-height: 600px;
+    min-height: 491px;
   }
-}
-@media (max-width: 768px) {
   .header__top {
     margin-bottom: 0;
   }
   .header__title {
-    margin-top: 1.25rem;
+    margin-top: 3.125rem;
   }
   .header__content {
     max-width: 50%;
