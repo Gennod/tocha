@@ -70,11 +70,11 @@ popup.addEventListener('click', (e) => {
             popup.innerHTML = `
                 <div class="container">
                     <ul class="header__list-popup">
-                        <li class="header__list-item header__list-item--active"><a href="#" class="header__list-link">Подключение</a></li>
-                        <li class="header__list-item"><a href="#" class="header__list-link">Оплата</a></li>
-                        <li class="header__list-item"><a href="#" class="header__list-link">Контакты</a></li>
-                        <li class="header__list-item"><a href="#" class="header__list-link" data-exit>Выход</a></li>
-                    /ul>
+                        <li class="header__list-popup-item header__list-popup-item--active"><a href="#" class="header__list-link">Подключение</a></li>
+                        <li class="header__list-popup-item"><a href="#" class="header__list-link">Оплата</a></li>
+                        <li class="header__list-popup-item"><a href="#" class="header__list-link">Контакты</a></li>
+                        <li class="header__list-popup-item"><a href="#" class="header__list-link" data-exit>Выход</a></li>
+                    </ul>
                 </div>
             `;
         }

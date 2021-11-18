@@ -31,6 +31,15 @@
         display: none;
 
     }
+    &__list-popup-item {
+        margin-bottom: rem(5);
+        padding: rem(5);
+        background-color: $color-main-light;
+        &--active {
+            font-family: $ff-bold;
+            color: $color-main;
+        }
+    }
     &__list-item {
         font-size: rem($fz-sbig);
         margin-left: rem(60);

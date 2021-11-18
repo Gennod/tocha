@@ -301,6 +301,15 @@ html {
   align-items: center;
   display: none;
 }
+.header__list-popup-item {
+  margin-bottom: 0.3125rem;
+  padding: 0.3125rem;
+  background-color: #f1e4ff;
+}
+.header__list-popup-item--active {
+  font-family: "Gilroy Bold";
+  color: #685ed6;
+}
 .header__list-item {
   font-size: 1.25rem;
   margin-left: 3.75rem;
