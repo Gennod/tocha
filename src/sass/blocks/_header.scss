@@ -4,13 +4,13 @@
     padding: rem(32) 0 rem(60) 0;
     position: relative;
     &__popup {
-        padding: rem(76) rem(30);
+        padding: rem(105) rem(70) rem(139) rem(70);
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: $color-white-popup;
+        background: $color-white;
         z-index: 2;
         opacity: 0;
         transition: all 0.5s;
@@ -21,6 +21,7 @@
         text-align: center;
         font-size: rem($fz-title);
         color: $color-main;
+        margin-top: 0;
     }
     &__registration-form {
         @include dflex;
@@ -29,12 +30,14 @@
     &__list {
         @include dflex-sb-center;
         display: none;
-
     }
     &__list-popup-item {
-        margin-bottom: rem(5);
+        margin-bottom: rem(25);
         padding: rem(5);
-        background-color: $color-main-light;
+        transition: all 0.4s;
+        &:hover {
+            color: $color-main;
+        }
         &--active {
             font-family: $ff-bold;
             color: $color-main;
@@ -52,14 +55,35 @@
             color: $color-main;
         }
     }
+    &__reminder {
+        text-align: right;
+        color: $color-link;
+        font-size: rem($fz-smallest);
+        margin-bottom: rem(32);
+    }
     &__input {
         @include push--auto;
-        padding: rem(14) rem(16);
+        padding: rem(16) rem(38) rem(16) rem(20);
         margin-bottom: rem(10);
         border: none;
         outline: none;
         border-radius: 5px;
         width: 100%;
+        background-color: $color-input-bg;
+        border: 1px solid transparent;
+        &--pseudo[required] + label {
+            position: relative;
+            display: inline-block;
+        }
+        &--pseudo[required] + label::after{
+            @include pseudo;
+            width: rem(24);
+            height: rem(24);
+            background: url("../assets/icons/closed-eye-icon.svg") no-repeat center/contain;
+            top: rem(-44);
+            right: rem(20);
+            cursor: pointer;
+        }
         &:focus {
             border: 1px solid $color-main;
         }
@@ -71,6 +95,8 @@
         width: rem(28);
         height: rem(28);
         cursor: pointer;
+        background: none;
+        border: none;
         &:before {
             @include pseudo;
             height: rem(3);
@@ -87,7 +113,6 @@
             border-radius: rem(2);
             transform: translate(-20%, rem(9)) rotate(-45deg);
         }
-        
     }
     &__menu {
         @include dflex;
@@ -146,11 +171,20 @@
         font-family: $ff-bold;
         font-size: rem($fz-subtitle);
     }
+    &__logo-img {
+        width: rem(133);
+        height: rem(42);
+    }
     &__btns {
         @include dflex-sb-center;
     }
     &__btn + &__btn {
         margin-left: rem(12);
+    }
+    &__btn {
+        &--big {
+            padding: rem(12) rem(32);
+        }
     }
     &__title {
         font-family: $ff-ebold;
@@ -203,6 +237,9 @@
         &__popup-message {
             font-size: rem(30);
         }
+        &__popup {
+            padding: rem(105) rem(70) rem(139) rem(70);
+        }
         &__burger {
             display: block;
         }
@@ -220,6 +257,16 @@
         }
         &__descr {
             font-size: rem($fz-medium);
+        }
+        &__input {
+            &--pseudo[required] + label::after{
+                width: rem(20);
+                height: rem(20);
+                right: rem(15);
+            }
+            &:focus {
+                border: 1px solid $color-main;
+            }
         }
     }
 }

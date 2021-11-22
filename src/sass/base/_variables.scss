@@ -9,6 +9,7 @@ $fz-big: 50px;
 $fz-sbig: 20px;
 $fz-medium: 18px;
 $fz-small: 14px;
+$fz-smallest: 12px;
 
 $ff-bold: "Gilroy Bold";
 $ff-ebold: "Gilroy ExtraBold";
@@ -32,9 +33,14 @@ $color-black: rgb(24, 25, 31);
 $color-footer-top: rgb(29, 37, 48);
 $color-footer-bottom: rgb(20, 27, 35);
 $color-cyan: rgb(24, 225, 247);
+$color-input-bg: rgb(247, 247, 253);
+$color-link: rgb(96, 93, 236);
+
 
 $btn-hover: rgb(195, 155, 251);
+$btn-active: $color-main;
 $btn-hover-alt: rgb(51, 175, 225);
+$btn-active-alt: $color-cyan;
 
 $desktop: 1440px;
 $tablet: 768px;

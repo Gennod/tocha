@@ -40,7 +40,7 @@ popup.addEventListener('click', (e) => {
             </button>
             <button class="header__menu-btn btn" data-registration>Регистрация</button>
         </nav>
-        <div class="header__cross"></div>
+        <button class="header__cross"></button>
         `;
     }
     if (e.target.hasAttribute("data-exit")) {
@@ -76,6 +76,7 @@ popup.addEventListener('click', (e) => {
                         <li class="header__list-popup-item"><a href="#" class="header__list-link" data-exit>Выход</a></li>
                     </ul>
                 </div>
+                <button class="header__cross"></button>
             `;
         }
     }
@@ -90,14 +91,16 @@ function login(btn) {
 
     popup.innerHTML = `
     <div class="container">
-        <p class="header__popup-message">Вход</p>
+        <h2 class="header__popup-message">Вход</h2>
         <form class="header__registration-form">
-            <input class="header__input" type="email" placeholder="Введите e-mail" name="email">
-            <input class="header__input" type="password" placeholder="Введите пароль" name="password">
-            <button class="header__btn btn" data-logged>Войти</button>
+            <input class="header__input" type="text" placeholder="Телефон" name="tel">
+            <input class="header__input header__input--pseudo" type="password" placeholder="Пароль" name="password" id="after" required>
+            <label for="after"></label>
+            <a class="header__reminder" href="#">Напомнить пароль</a>
+            <button class="header__btn header__btn--big btn" data-logged>Войти</button>
         </form>
     </div>
-    <div class="header__cross"></div>
+    <button class="header__cross"></button>
     `;
     
 }
@@ -114,7 +117,7 @@ function exit(btn) {
         </button>
         <button class="header__menu-btn btn" data-registration>Регистрация</button>
     </nav>
-    <div class="header__cross"></div>
+    <button class="header__cross"></button>
     `;
     if (document.body.clientWidth <= 375) {
         burger.style.display = 'block';
@@ -133,18 +136,20 @@ function registration(btn) {
     exitBtn.forEach(btn => btn.style.display = 'none');
     popup.innerHTML = `
     <div class="container">
-        <p class="header__popup-message">Регистрация</p>
+        <h2 class="header__popup-message">Регистрация</h2>
         <form class="header__registration-form">
-            <input class="header__input" type="text" placeholder="Введите Имя" name="name">
-            <input class="header__input" type="text" placeholder="Введите Фамилию" name="surname">
-            <input class="header__input" type="email" placeholder="Введите e-mail" name="email">
-            <input class="header__input" type="password" placeholder="Введите пароль" name="password">
+            <input class="header__input" type="text" placeholder="Телефон" name="tel">
+            <input class="header__input" type="email" placeholder="Электронная почта" name="email">
+            <input class="header__input header__input--pseudo" id="password" type="password" placeholder="Пароль" name="password" required>
+            <label for="password"></label>
+            <input class="header__input header__input--pseudo" id="repeatPassword" type="password" placeholder="Повторите пароль" name="password" required>
+            <label for="repeatPassword"></label>
             <button class="btn" type="submit" data-logged>
                 Зарегистрироваться
             </button>
         </form>
     </div>
-    <div class="header__cross"></div>
+    <button class="header__cross"></button>
     `;
 }
 

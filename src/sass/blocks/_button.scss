@@ -11,12 +11,23 @@
   transition: .3s;
   text-align: center;
   &:hover {
-    background: $btn-hover;
-    color: $color-main;
+    background: $btn-hover-alt;
+    color: $color-white;
+  }
+  &:active {
+    background: $btn-active-alt;
   }
   &--active {
     background: $color-main-light;
     color: $color-main;
+    &:hover {
+      background: $btn-hover;
+      color: $color-main;
+    }
+    &:active {
+      background: $btn-active;
+      color: $color-white;
+    }
   }
   &--hidden {
     display: none;

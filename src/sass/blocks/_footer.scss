@@ -25,13 +25,8 @@
     left: rem(10);
   }
   &__img {
-    width: rem(80);
-    height: rem(69);
-  }
-  &__logo-name {
-    font-family: $ff-bold;
-    font-size: rem($fz-connect);
-    color: $color-white;
+    width: rem(87);
+    height: rem(98);
   }
   &__column {
     margin-left: rem(126);
@@ -68,10 +63,21 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .footer {
+    &__top-wrapper {
+      padding: 0 rem(129) rem(0) rem(40);
+    }
+    &__column {
+      margin-left: rem(60);
+    }
+  }
+}
 @media (max-width: 375px) {
   .footer {
     &__top-wrapper {
       justify-content: center;
+      padding: 0;
 
     }
     &__nav {
@@ -81,8 +87,8 @@
       width: rem(70);
       height: auto;
     }
-    &__logo-name {
-      font-size: rem(32);
+    &__column {
+      margin-bottom: rem(20);
     }
     &__column-name {
       margin-top: 0;
